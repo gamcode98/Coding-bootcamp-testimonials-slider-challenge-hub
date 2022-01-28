@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
 :root {
   /* Colors */
   /* Primary */
@@ -17,17 +16,14 @@ body {
   background-repeat: no-repeat;
   background-position: right -25vw bottom -18vh;
 }
-.hero-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.3rem;
-  box-shadow: 0px 15px 20px 1px var(--DarkBlue);
-}
 .w-rapper {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.slider {
+  position: relative;
 }
 .hero-container {
   background-image: url("./../assets/images/pattern-bg.svg");
@@ -36,9 +32,37 @@ body {
   margin-bottom: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+.slider-slides {
+  height: 220px;
   position: relative;
 }
-.btns {
+.slider-slide-info,
+.slider-slide-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+}
+.hero-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.3rem;
+  box-shadow: 0px 15px 20px 1px var(--DarkBlue);
+  object-fit: cover;
+  object-position: 50% 0%;
+}
+.slider-slide-info.active,
+.slider-slide-img.active {
+  opacity: 1;
+  visibility: visible;
+}
+.slider-btns {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -49,6 +73,7 @@ body {
 }
 .btn-prev,
 .btn-next {
+  cursor: pointer;
   border: none;
   background-color: inherit;
 }
@@ -60,7 +85,6 @@ body {
 }
 .info-container {
   padding-top: 2rem;
-  position: relative;
 }
 .info-container::before {
   content: "";
@@ -101,4 +125,57 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+@media screen and (min-width: 768px) {
+  .hero-image {
+    width: 60%;
+  }
+  .hero-container .slider-slides {
+    height: 370px;
+  }
+  .info-container .slider-slides {
+    height: 140px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0;
+    gap: 3rem;
+    align-items: center;
+    min-height: 100vh;
+    background-position: left bottom;
+  }
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 85%;
+    margin-right: 6rem;
+    position: relative;
+  }
+  .slider-btns {
+    position: absolute;
+    left: 35%;
+    bottom: 2rem;
+    background-color: var(--White);
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+  .info-container {
+    position: relative;
+    left: 13rem;
+  }
+  .paraph-info {
+    text-align: left;
+    font-size: 1.3rem;
+  }
+  .name-info,
+  .profession-info {
+    text-align: left;
+    display: inline-block;
+    font-size: 1rem;
+  }
+  .info-container::before {
+    left: 20%;
+  }
 }

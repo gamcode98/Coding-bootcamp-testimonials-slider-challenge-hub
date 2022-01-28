@@ -7,6 +7,9 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
 
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
@@ -15,9 +18,16 @@
 
 <body>
   <main>
-    <div class="hero-container w-rapper">
-      <img src="./assets/images/image-tanya.jpg" alt="image-tanya" width="220" class="hero-image">
-      <div class="btns">
+    <div class="slider hero-container w-rapper">
+      <div class="slider-slides">
+        <div class="slider-slide-img active">
+          <img src="./assets/images/image-tanya.jpg" alt="image-tanya" width="220" class="hero-image">
+        </div>
+        <div class="slider-slide-img">
+          <img src="./assets/images/image-john.jpg" alt="image-john" width="220" class="hero-image">
+        </div>
+      </div>
+      <div class="slider-btns">
         <button class="btn-prev">
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="18">
             <path fill="none" stroke="#8585AC" stroke-width="3" d="M11 1L3 9l8 8" />
@@ -30,32 +40,46 @@
         </button>
       </div>
     </div>
-    <div class="info-container w-rapper">
-      <p class="paraph-info">
-        “ I’ve been interested in coding for a while but never taken the jump, until now.
-        I couldn’t recommend this course enough. I’m now in the job of my dreams and so
-        excited about the future. ”
-      </p>
-      <h4 class="name-info">
-        Tanya Sinclair
-      </h4>
-      <h4 class="profession-info">
-        UX Engineer
-      </h4>
+    <div class="slider info-container w-rapper">
+      <div class="slider-slides">
+        <div class="slider-slide-info active">
+          <p class="paraph-info">
+            “ I’ve been interested in coding for a while but never taken the jump, until now.
+            I couldn’t recommend this course enough. I’m now in the job of my dreams and so
+            excited about the future. ”
+          </p>
+          <h4 class="name-info">
+            Tanya Sinclair
+          </h4>
+          <h4 class="profession-info">
+            UX Engineer
+          </h4>
+        </div>
+        <div class="slider-slide-info">
+          <p class="paraph-info">
+            “ If you want to lay the best foundation possible I’d recommend taking this course.
+            The depth the instructors go into is incredible. I now feel so confident about
+            starting up as a professional developer. ”
+          </p>
+          <h4 class="name-info">
+            John Tarkpor
+          </h4>
+          <h4 class="profession-info">
+            Junior Front-end Developer
+          </h4>
+        </div>
+
+      </div>
     </div>
 
-    <!-- “ If you want to lay the best foundation possible I’d recommend taking this course.
-    The depth the instructors go into is incredible. I now feel so confident about
-    starting up as a professional developer. ”
-
-    John Tarkpor
-    Junior Front-end Developer -->
   </main>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Gamcode</a>.
   </div>
+
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
