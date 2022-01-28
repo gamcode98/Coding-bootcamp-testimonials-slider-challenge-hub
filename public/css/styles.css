@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+:root {
+  /* Colors */
+  /* Primary */
+  --DarkBlue: hsl(240, 38%, 20%);
+  --GrayishBlue: hsl(240, 18%, 77%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  margin: 2rem 0;
+  font-family: "Inter", sans-serif;
+  /* Weights: 300, 500, 700 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("./../assets/images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: right -25vw bottom -18vh;
+}
+.hero-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.3rem;
+  box-shadow: 0px 15px 20px 1px var(--DarkBlue);
+}
+.w-rapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-container {
+  background-image: url("./../assets/images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.btns {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+  background-color: var(--White);
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.btn-prev,
+.btn-next {
+  border: none;
+  background-color: inherit;
+}
+.btn-prev {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.btn-next {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+.info-container {
+  padding-top: 2rem;
+  position: relative;
+}
+.info-container::before {
+  content: "";
+  position: absolute;
+  background-image: url("./../assets/images/pattern-quotes.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+.paraph-info {
+  margin-top: -0.5rem;
+  text-align: center;
+  color: var(--DarkBlue);
+  opacity: 0.8;
+  font-weight: 500;
+}
+.name-info {
+  text-align: center;
+  margin-bottom: 0.2rem;
+  font-size: 0.9rem;
+}
+.profession-info {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0rem;
+  color: var(--GrayishBlue);
+  font-weight: 700;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
